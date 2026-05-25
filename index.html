@@ -24,11 +24,14 @@
       cursor: pointer;
     }
 
-    #result {
-      margin-top: 30px;
-      font-size: 24px;
-      line-height: 1.8;
-    }
+   #result {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+
+    
 
     #character-list {
   display: grid;
@@ -86,7 +89,10 @@
       const team = shuffled.slice(0, 8);
 
       document.getElementById("result").innerHTML =
-        team.join("<br>");
+  team.map(character =>
+    `<div class="character-card">${character}</div>`
+  ).join("");
+      
     }
   </script>
 
