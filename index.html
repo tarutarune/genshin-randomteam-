@@ -42,6 +42,10 @@
 
   <div id="result"></div>
 
+  <h2>現在実装キャラ</h2>
+
+<div id="character-list"></div>
+
   <script>
     const characters = [
       "胡桃",
@@ -53,6 +57,9 @@
       "万葉",
       "アルハイゼン"
     ];
+
+    document.getElementById("character-list").innerHTML =
+  characters.join(" / ");
 
     function randomTeam() {
       const shuffled = [...characters]
