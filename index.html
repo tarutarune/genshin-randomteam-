@@ -29,6 +29,22 @@
       font-size: 24px;
       line-height: 1.8;
     }
+
+    #character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.character-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+    
   </style>
 </head>
 
@@ -59,7 +75,9 @@
     ];
 
     document.getElementById("character-list").innerHTML =
-  characters.join(" / ");
+  characters.map(character =>
+    `<div class="character-card">${character}</div>`
+  ).join("");
 
     function randomTeam() {
       const shuffled = [...characters]
