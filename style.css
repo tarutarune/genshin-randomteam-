@@ -17,21 +17,24 @@
       cursor: pointer;
     }
 
-   #result {
+#result {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 120px));
+  justify-content: center;
   gap: 12px;
   margin-top: 30px;
 }
 
     
 
-    #character-list {
+#character-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 120px));
+  justify-content: center;
   gap: 12px;
   margin-top: 20px;
 }
+
 
 .character-card {
   background: white;
