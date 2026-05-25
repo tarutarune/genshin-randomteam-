@@ -1,5 +1,5 @@
-<script>
-    const characters = [
+
+const characters = [
   "旅人",
   "アンバー",
   "ガイア",
@@ -139,4 +139,3 @@ function toggleCharacter(character) {
   ).join("");
       
     }
-  </script>
