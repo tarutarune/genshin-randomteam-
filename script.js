@@ -1,4 +1,3 @@
-
 const characters = [
   "旅人",
   "アンバー",
@@ -90,24 +89,25 @@ const characters = [
   "スカーク"
 ];
 
-    let selectedCharacters = [];
-
-renderCharacters();
+let selectedCharacters = [];
 
 function toggleCharacter(character) {
 
   if (selectedCharacters.includes(character)) {
+
     selectedCharacters =
       selectedCharacters.filter(c => c !== character);
+
   } else {
+
     selectedCharacters.push(character);
+
   }
 
   renderCharacters();
 }
 
-
-   function renderCharacters() {
+function renderCharacters() {
 
   document.getElementById("character-list").innerHTML =
     characters.map(character => {
@@ -118,24 +118,35 @@ function toggleCharacter(character) {
           : "";
 
       return `
-        <div class="character-card ${selected}"
-          onclick="toggleCharacter('${character}')">
+        <div
+          class="character-card ${selected}"
+          onclick="toggleCharacter('${character}')"
+        >
           ${character}
         </div>
       `;
     }).join("");
-} 
+}
 
-    
-    function randomTeam() {
-      const shuffled = [...selectedCharacters]
-        .sort(() => 0.5 - Math.random());
+function randomTeam() {
 
-      const team = shuffled.slice(0, 8);
+  if (selectedCharacters.length === 0) {
 
-      document.getElementById("result").innerHTML =
-  team.map(character =>
-    `<div class="character-card">${character}</div>`
-  ).join("");
-      
-    }
+    document.getElementById("result").innerHTML =
+      "キャラを選択してください";
+
+    return;
+  }
+
+  const shuffled = [...selectedCharacters]
+    .sort(() => 0.5 - Math.random());
+
+  const team = shuffled.slice(0, 8);
+
+  document.getElementById("result").innerHTML =
+    team.map(character =>
+      `<div class="character-card">${character}</div>`
+    ).join("");
+}
+
+renderCharacters();
