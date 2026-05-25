@@ -47,6 +47,10 @@
   font-size: 18px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+   .selected {
+  background: #ffd166;
+} 
     
   </style>
 </head>
@@ -157,13 +161,45 @@
   "スカーク"
 ];
 
-    document.getElementById("character-list").innerHTML =
-  characters.map(character =>
-    `<div class="character-card">${character}</div>`
-  ).join("");
+    let selectedCharacters = [];
 
+renderCharacters();
+
+function toggleCharacter(character) {
+
+  if (selectedCharacters.includes(character)) {
+    selectedCharacters =
+      selectedCharacters.filter(c => c !== character);
+  } else {
+    selectedCharacters.push(character);
+  }
+
+  renderCharacters();
+}
+
+
+   function renderCharacters() {
+
+  document.getElementById("character-list").innerHTML =
+    characters.map(character => {
+
+      const selected =
+        selectedCharacters.includes(character)
+          ? "selected"
+          : "";
+
+      return `
+        <div class="character-card ${selected}"
+          onclick="toggleCharacter('${character}')">
+          ${character}
+        </div>
+      `;
+    }).join("");
+} 
+
+    
     function randomTeam() {
-      const shuffled = [...characters]
+      const shuffled = [...selectedCharacters]
         .sort(() => 0.5 - Math.random());
 
       const team = shuffled.slice(0, 8);
