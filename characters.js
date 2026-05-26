@@ -23,6 +23,6 @@ const characters = [
     rarity: 4,
     element: "氷",
     weapon: "片手剣",
-    image: "images/kaeya.png"
+    image: "images/Kaeya.png"
   }
 ];
