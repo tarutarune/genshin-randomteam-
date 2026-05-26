@@ -33,6 +33,7 @@ function renderCharacters() {
         <div
           class="
           character-card
+          selectable-card
           rarity-${character.rarity}
           ${selected}
           "
