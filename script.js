@@ -108,6 +108,8 @@ function toggleCharacter(character) {
   renderCharacters();
 }
 
+window.toggleCharacter = toggleCharacter
+
 function renderCharacters() {
 
   document.getElementById("character-list").innerHTML =
