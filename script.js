@@ -1,16 +1,16 @@
 let selectedCharacters =
   characters.map(character => character.id);
 
-function toggleCharacter(character) {
+function toggleCharacter(characterId) {
 
-  if (selectedCharacters.includes(character)) {
+  if (selectedCharacters.includes(characterId)) {
 
     selectedCharacters =
-      selectedCharacters.filter(c => c !== character);
+      selectedCharacters.filter(id => id !== characterId);
 
   } else {
 
-    selectedCharacters.push(character);
+    selectedCharacters.push(characterId);
 
   }
 
@@ -34,7 +34,15 @@ function renderCharacters() {
           class="character-card ${selected}"
           onclick="toggleCharacter('${character.id}')"
         >
-          ${character.name}
+
+          <img
+            src="${character.image}"
+            alt="${character.name}"
+            class="character-image"
+          >
+
+          <p>${character.name}</p>
+
         </div>
       `;
     }).join("");
@@ -53,7 +61,7 @@ function randomTeam() {
   const shuffled = [...selectedCharacters]
     .sort(() => 0.5 - Math.random());
 
-  const team = shuffled.slice(0, 8);
+  const team = shuffled.slice(0, 4);
 
   document.getElementById("result").innerHTML =
     team.map(characterId => {
@@ -61,20 +69,19 @@ function randomTeam() {
       const character =
         characters.find(c => c.id === characterId);
 
-return `
-  <div class="character-card">
+      return `
+        <div class="character-card">
 
-    <img
-      src="${character.image}"
-      alt="${character.name}"
-      class="character-image"
-    >
+          <img
+            src="${character.image}"
+            alt="${character.name}"
+            class="character-image"
+          >
 
-    <p>${character.name}</p>
+          <p>${character.name}</p>
 
-  </div>
-`;
-      
+        </div>
+      `;
     }).join("");
 }
 
