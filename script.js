@@ -74,7 +74,10 @@ function randomTeam() {
         characters.find(c => c.id === characterId);
 
       return `
-        <div class="character-card">
+        <div class="
+  character-card
+  rarity-${character.rarity}
+">
 
           <img
             src="${character.image}"
