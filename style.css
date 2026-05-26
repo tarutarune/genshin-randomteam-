@@ -70,10 +70,11 @@ button {
   padding:0;
   justify-content: center;
   align-items: center;
+  opacity: 0.45;
 }
 
 .character-card.selected {
-
+　opacity: 1;
 }
 
 .character-image {
