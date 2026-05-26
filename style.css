@@ -145,16 +145,19 @@ button {
   }
 }
 
+
 @media (max-width: 768px) {
 
   #character-list {
+
+    grid-template-columns:
+      repeat(4, 72px);
 
     row-gap: 14px;
     column-gap: 8px;
   }
 
 }
-
 @media (max-width: 768px) {
 
   #result {
