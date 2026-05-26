@@ -1,6 +1,7 @@
 
 
-let selectedCharacters = [...characters];
+let selectedCharacters =
+  characters.map(character => character.id);
 
 function toggleCharacter(character) {
 
@@ -26,16 +27,16 @@ function renderCharacters() {
     characters.map(character => {
 
       const selected =
-        selectedCharacters.includes(character)
+        selectedCharacters.includes(character.id)
           ? "selected"
           : "";
 
       return `
         <div
           class="character-card ${selected}"
-          onclick="toggleCharacter('${character}')"
+          onclick="toggleCharacter('${character.id}')"
         >
-          ${character}
+          ${character.name}
         </div>
       `;
     }).join("");
