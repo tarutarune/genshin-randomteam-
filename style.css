@@ -132,3 +132,14 @@ button {
 
   opacity: 0.35;
 }
+
+@media (max-width: 768px) {
+
+  .character-card,
+  .empty-slot {
+
+    width: 72px;
+    height: 72px;
+  }
+
+}
