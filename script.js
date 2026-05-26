@@ -64,19 +64,26 @@ function randomTeam() {
   const shuffled = [...selectedCharacters]
     .sort(() => 0.5 - Math.random());
 
-  const team = shuffled.slice(0, 4);
+  const team = shuffled.slice(0, 8);
 
-  document.getElementById("result").innerHTML =
-    team.map(characterId => {
+  let resultHTML = "";
+
+  for (let i = 0; i < 8; i++) {
+
+    const characterId = team[i];
+
+    if (characterId) {
 
       const character =
         characters.find(c => c.id === characterId);
 
-      return `
-        <div class="
-  character-card
-  rarity-${character.rarity}
-">
+      resultHTML += `
+        <div
+          class="
+            character-card
+            rarity-${character.rarity}
+          "
+        >
 
           <img
             src="${character.image}"
@@ -84,10 +91,19 @@ function randomTeam() {
             class="character-image"
           >
 
-
         </div>
       `;
-    }).join("");
+
+    } else {
+
+      resultHTML += `
+        <div class="empty-slot"></div>
+      `;
+    }
+  }
+
+  document.getElementById("result").innerHTML =
+    resultHTML;
 }
 
 renderCharacters();
