@@ -62,10 +62,7 @@ function randomTeam() {
         characters.find(c => c.id === characterId);
 
 return `
-  <div
-    class="character-card ${selected}"
-    onclick="toggleCharacter('${character.id}')"
-  >
+  <div class="character-card">
 
     <img
       src="${character.image}"
