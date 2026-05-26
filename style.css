@@ -30,6 +30,11 @@ h2 {
       cursor: pointer;
     }
 
+.button-area {
+  text-align: center;
+}
+
+
 #result {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 120px));
