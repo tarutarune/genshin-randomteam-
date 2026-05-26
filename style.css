@@ -58,7 +58,7 @@ button {
     repeat(auto-fit, minmax(120px, 120px)); 
 
   justify-content: center;
-  gap: 18px;
+  gap: 12px;
   margin-top: 20px;
 }
 
