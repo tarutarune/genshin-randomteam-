@@ -24,5 +24,14 @@ const characters = [
     element: "氷",
     weapon: "片手剣",
     image: "images/Kaeya.png"
+  },
+
+  {
+    id: "lisa",
+    name: "リサ",
+    rarity: 4,
+    element: "雷",
+    weapon: "法器",
+    image: "images/Lisa.png"
   }
 ];
