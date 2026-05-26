@@ -144,6 +144,12 @@ button {
     height: 72px;
   }
 
+    #character-list {
+
+    row-gap: 14px;
+    column-gap: 8px;
+  }
+
 @media (max-width: 768px) {
 
   #result {
