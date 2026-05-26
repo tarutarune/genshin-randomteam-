@@ -73,7 +73,7 @@ button {
 }
 
 .character-card.selected {
-  transform: scale(1.05);
+
 }
 
 .character-image {
