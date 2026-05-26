@@ -142,4 +142,16 @@ button {
     height: 72px;
   }
 
-}
+@media (max-width: 768px) {
+
+  #result {
+
+    grid-template-columns:
+      repeat(4, 72px);
+
+    gap: 8px;
+  }
+
+}}
+
+
