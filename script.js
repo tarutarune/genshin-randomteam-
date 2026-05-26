@@ -45,8 +45,6 @@ function renderCharacters() {
             class="character-image"
           >
 
-          <p>${character.name}</p>
-
         </div>
       `;
     }).join("");
@@ -85,7 +83,6 @@ function randomTeam() {
             class="character-image"
           >
 
-          <p>${character.name}</p>
 
         </div>
       `;
