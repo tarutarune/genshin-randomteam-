@@ -31,7 +31,11 @@ function renderCharacters() {
 
       return `
         <div
-          class="character-card ${selected}"
+          class="
+          character-card
+          rarity-${character.rarity}
+          ${selected}
+          "
           onclick="toggleCharacter('${character.id}')"
         >
 
