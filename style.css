@@ -58,7 +58,8 @@ button {
     repeat(auto-fit, minmax(120px, 120px)); 
 
   justify-content: center;
-  gap: 15px;
+  row-gap: 18px;
+　column-gap: 12px;
   margin-top: 20px;
 }
 
