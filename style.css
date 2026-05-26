@@ -23,7 +23,17 @@ h2 {
         text-align: center;
     }
 
-    button {
+h1,
+h2 {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Yu Gothic",
+    sans-serif;
+}
+
+button {
       padding: 12px 24px;
       font-size: 20px;
       margin-top: 20px;
