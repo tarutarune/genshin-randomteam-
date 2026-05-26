@@ -74,8 +74,8 @@ button {
 }
 
 .character-card.selected {
-  background: #cbef43;
-  border-color: #8fb800;
+  border: 4px solid #cbef43;
+  transform: scale(1.03);
 }
 
 .character-image {
@@ -88,4 +88,22 @@ button {
 .character-card p {
   margin-top: 10px;
   font-size: 18px;
+}
+
+.rarity-5 {
+  background:
+    linear-gradient(
+      180deg,
+      #fff0c2 0%,
+      #e0aa3e 100%
+    );
+}
+
+.rarity-4 {
+  background:
+    linear-gradient(
+      180deg,
+      #e6d5ff 0%,
+      #9b72cf 100%
+    );
 }
