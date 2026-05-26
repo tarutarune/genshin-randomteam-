@@ -33,37 +33,38 @@ window.toggleCharacter = toggleCharacter;
 function renderCharacters() {
 
   document.getElementById("character-list").innerHTML =
-     [...characters].reverse().map(character =>{
+    [...characters].reverse().map(character => {
 
       const selected =
         selectedCharacters.includes(character.id)
           ? "selected"
           : "";
-return `
-  <div
-    class="
-      character-card
-      selectable-card
-      rarity-${character.rarity}
-      ${selected}
-    "
-    onclick="toggleCharacter('${character.id}')"
-  >
 
-    <img
-      src="${character.image}"
-      alt="${character.name}"
-      class="character-image"
-    />
+      return `
+        <div
+          class="
+            character-card
+            selectable-card
+            rarity-${character.rarity}
+            ${selected}
+          "
+          onclick="toggleCharacter('${character.id}')"
+        >
 
-    <img
-      src="${elementIcons[character.element]}"
-      class="element-icon"
-    />
+          <img
+            src="${character.image}"
+            alt="${character.name}"
+            class="character-image"
+          />
 
-  </div>
-`;
- 
+          <img
+            src="${elementIcons[character.element]}"
+            alt="${character.element}"
+            class="element-icon"
+          />
+
+        </div>
+      `;
     }).join("");
 }
 
