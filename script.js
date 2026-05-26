@@ -90,7 +90,7 @@ const characters = [
   "スカーク"
 ];
 
-let selectedCharacters = [];
+let selectedCharacters = [...characters];
 
 function toggleCharacter(character) {
 
