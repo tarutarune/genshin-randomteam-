@@ -22,7 +22,7 @@ window.toggleCharacter = toggleCharacter;
 function renderCharacters() {
 
   document.getElementById("character-list").innerHTML =
-    characters.map(character => {
+     [...characters].reverse().map(character =>{
 
       const selected =
         selectedCharacters.includes(character.id)
