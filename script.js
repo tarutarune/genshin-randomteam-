@@ -1,7 +1,3 @@
-document
-  .getElementById("random-button")
-  .addEventListener("click", randomTeam);
-
 
 const characters = [
   "旅人",
@@ -155,3 +151,10 @@ function randomTeam() {
 }
 
 renderCharacters();
+
+
+document
+  .getElementById("random-button")
+  .addEventListener("click", randomTeam);
+
+
