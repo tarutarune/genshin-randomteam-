@@ -1,3 +1,8 @@
+document
+  .getElementById("random-button")
+  .addEventListener("click", randomTeam);
+
+
 const characters = [
   "旅人",
   "アンバー",
