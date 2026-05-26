@@ -106,7 +106,10 @@ function randomTeam() {
             alt="${character.name}"
             class="character-image"
           >
-
+  <img
+  src="${elementIcons[character.element]}"
+  class="element-icon"
+>
         </div>
       `;
 
