@@ -64,8 +64,9 @@ h2 {
     sans-serif;
 }
 
-   .selected {
+.character-card.selected {
   background: #cbef43;
-} 
+  border: 2px solid #8fb800;
+}
     
   </style>
