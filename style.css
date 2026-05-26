@@ -59,7 +59,7 @@ button {
 
   justify-content: center;
   row-gap: 18px;
-　column-gap: 12px;
+　column-gap:12px;
   margin-top: 20px;
 }
 
@@ -112,8 +112,10 @@ button {
   top: 4px;
   left: 4px;
 
-  width: 28px;
-  height: 28px;
+  width: 18px;
+  height: 18px;
+
+  z-index: 10;
 
   background: rgba(0,0,0,0.4);
 
