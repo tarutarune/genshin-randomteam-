@@ -108,15 +108,13 @@ button {
 
   position: absolute;
 
-  top: 0;
-  left: 0;
+  top: 4px;
+  left: 4px;
 
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 
-  z-index: 9999;
-
-  background: red;
+  z-index: 100;
 }
 
 .rarity-5 {
