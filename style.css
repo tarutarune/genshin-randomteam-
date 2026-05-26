@@ -70,11 +70,15 @@ button {
   padding:0;
   justify-content: center;
   align-items: center;
-  opacity: 0.45;
+  filter: brightness(0.45);
+  transition:
+    filter 0.2s,
+    transform 0.2s;
 }
 
 .character-card.selected {
-  opacity: 1;
+  filter: brightness(1);
+  transform: scale(1.05);
 }
 
 .character-image {
