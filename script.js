@@ -39,31 +39,31 @@ function renderCharacters() {
         selectedCharacters.includes(character.id)
           ? "selected"
           : "";
+return `
+  <div
+    class="
+      character-card
+      selectable-card
+      rarity-${character.rarity}
+      ${selected}
+    "
+    onclick="toggleCharacter('${character.id}')"
+  >
 
-      return `
-        <div
-          class="
-          character-card
-          selectable-card
-          rarity-${character.rarity}
-          ${selected}
-          "
-          onclick="toggleCharacter('${character.id}')"
-        >
+    <img
+      src="${character.image}"
+      alt="${character.name}"
+      class="character-image"
+    />
 
-          <img
-            src="${character.image}"
-            alt="${character.name}"
-            class="character-image"
-          >
+    <img
+      src="${elementIcons[character.element]}"
+      class="element-icon"
+    />
 
-          <img
-          src="${elementIcons[character.element]}"
-          class="element-icon"
-          >
-
-        </div>
-      `;
+  </div>
+`;
+ 
     }).join("");
 }
 
