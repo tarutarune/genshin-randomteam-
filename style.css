@@ -154,7 +154,7 @@ button {
       repeat(4, 72px);
 
     row-gap: 14px;
-    column-gap: 8px;
+    column-gap: 14px;
   }
 
 }
