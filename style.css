@@ -63,8 +63,8 @@ button {
 
 .character-card {
 
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
