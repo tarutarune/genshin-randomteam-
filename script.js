@@ -55,13 +55,23 @@ function randomTeam() {
   const shuffled = [...selectedCharacters]
     .sort(() => 0.5 - Math.random());
 
-  const team = shuffled.slice(0, 8);
+const team = shuffled.slice(0, 8);
 
-  document.getElementById("result").innerHTML =
-    team.map(character =>
-      `<div class="character-card">${character}</div>`
-    ).join("");
-}
+document.getElementById("result").innerHTML =
+  team.map(characterId => {
+
+    const character =
+      characters.find(c => c.id === characterId);
+
+    return `
+      <div class="character-card">
+        ${character.name}
+      </div>
+    `;
+  }).join("");
+
+  
+
 
 renderCharacters();
 
